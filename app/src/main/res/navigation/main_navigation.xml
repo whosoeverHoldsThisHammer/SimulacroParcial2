@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.simulacroparcial2.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/favoritos"
+        android:name="com.example.simulacroparcial2.Favoritos"
+        android:label="fragment_favoritos"
+        tools:layout="@layout/fragment_favoritos" />
+    <fragment
+        android:id="@+id/adopcion"
+        android:name="com.example.simulacroparcial2.Adopcion"
+        android:label="fragment_adopcion"
+        tools:layout="@layout/fragment_adopcion" />
+    <fragment
+        android:id="@+id/publicacion"
+        android:name="com.example.simulacroparcial2.Publicacion"
+        android:label="fragment_publicacion"
+        tools:layout="@layout/fragment_publicacion" />
+    <fragment
+        android:id="@+id/detailScreen"
+        android:name="com.example.simulacroparcial2.DetailScreen"
+        android:label="fragment_detail_screen"
+        tools:layout="@layout/fragment_detail_screen" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.simulacroparcial2.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.simulacroparcial2.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.SimulacroParcial2" parent="Base.Theme.SimulacroParcial2" />
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SimulacroParcial2" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="materialButtonStyle">@style/RoundedButton</item>
+        <item name="navigationViewStyle">@style/AppTheme.NavigationView</item>
+        <item name="textAppearanceButton">@style/textAppearanceButton</item>
+
+    </style>
+
+    <style name="textAppearanceButton" parent="TextAppearance.MaterialComponents.Button">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/RoundedShapeAppearance</item>
+    </style>
+
+    <style name="RoundedShapeAppearance" parent="ShapeAppearance.MaterialComponents">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="materialButtonStyle">@style/RoundedButton</item>
+        <item name="textAppearanceButton">@style/textAppearanceButton</item>
+        <item name="colorPrimary">@color/purple</item>
+    </style>
+
+    <style name="AppTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
+</resources>
