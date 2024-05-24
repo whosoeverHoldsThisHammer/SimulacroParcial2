@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
                         context.applicationContext,
                         AppDatabase::class.java,
                         name = "mascotasDB"
-                    ).build()
+                    ).allowMainThreadQueries().build()
                 }
             }
 

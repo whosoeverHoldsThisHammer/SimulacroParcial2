@@ -24,8 +24,8 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var bottomNavView: BottomNavigationView
 
-    private var db: AppDatabase? = null
-    private var mascotaDao : mascotaDao? = null
+    // private var db: AppDatabase? = null
+    // private var mascotaDao : mascotaDao? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,10 +52,10 @@ class HomeActivity : AppCompatActivity() {
 
 
         // Hacerlo desde HomeViewModel ?
-        db = AppDatabase.getAppDatabase(this)
-        mascotaDao = db?.mascotaDao()
+        // db = AppDatabase.getAppDatabase(this)
+        // mascotaDao = db?.mascotaDao()
 
-        
+
 
     }
 
