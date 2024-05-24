@@ -34,7 +34,9 @@ class Publicacion : Fragment() {
         super.onResume()
         //requireActivity().setTitle("Publicación")
 
-        requireActivity().getActionBar()?.title = "Publicación"
+        //requireActivity().getActionBar()?.title = "Publicación"
+
+        activity?.title = "Your title"
     }
 
 }
