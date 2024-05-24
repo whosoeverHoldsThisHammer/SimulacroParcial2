@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+
 class Home : Fragment() {
+
+    private lateinit var view : View
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +23,15 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return view
     }
 
+    override fun onStart(){
+        super.onStart()
+
+
+    }
 
 }

@@ -11,6 +11,8 @@ import androidx.navigation.NavHost
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.example.simulacroparcial2.database.AppDatabase
+import com.example.simulacroparcial2.database.mascotaDao
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -21,6 +23,10 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var navHostFragment: NavHostFragment
 
     private lateinit var bottomNavView: BottomNavigationView
+
+    private var db: AppDatabase? = null
+    private var mascotaDao : mascotaDao? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +49,13 @@ class HomeActivity : AppCompatActivity() {
 
         bottomNavView = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
         NavigationUI.setupWithNavController(bottomNavView, navHostFragment.navController)
+
+
+        // Hacerlo desde HomeViewModel ?
+        db = AppDatabase.getAppDatabase(this)
+        mascotaDao = db?.mascotaDao()
+
+        
 
     }
 
