@@ -19,10 +19,14 @@ object RoomModule {
 
     @Singleton
     @Provides
-    fun provideRoomDatabase(@ApplicationContext context : Context) = Room.databaseBuilder(context, AppDatabase::class.java, MASCOTAS_DB_NAME).build()
+    fun provideRoomDatabase(@ApplicationContext context: Context): AppDatabase {
+        return Room.databaseBuilder(context, AppDatabase::class.java, MASCOTAS_DB_NAME).allowMainThreadQueries().build()
+    }
 
     @Singleton
     @Provides
-    fun provideMascotaDao(db: AppDatabase) = db.mascotaDao()
+    fun provideMascotaDao(database: AppDatabase): mascotaDao {
+        return database.mascotaDao()
+    }
 
 }

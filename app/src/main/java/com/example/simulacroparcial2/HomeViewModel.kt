@@ -11,15 +11,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val repository : MascotaRepo
+    private val repository: MascotaRepo
 ) : ViewModel() {
 
     //private lateinit var mascotas : MutableLiveData<Mascota>
-    val name = MutableLiveData<String>()
+    private val name = MutableLiveData<String>()
 
     fun changeName() = viewModelScope.launch {
-        val mascota = repository.getMascota(1)
-        name.postValue(mascota?.nombre.toString())
-        Log.e("Mascota desde viewModel", mascota?.nombre.toString())
+         val mascota = repository.getMascota(1)
+        // name.postValue(mascota?.nombre.toString())
+         Log.e("Mascota desde viewModel", mascota?.nombre.toString())
+
     }
 }
